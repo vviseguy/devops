@@ -14,7 +14,7 @@ Now that you have added linting and created unit tests for the **jwt-pizza-servi
 
 ## Create the GitHub Action workflow
 
-In your fork of the **jwt-pizza-service** create the file `.github/workflows/ci.yml` and add the following.
+In your fork of the **jwt-pizza-service** create the file `.github/workflows/ci.yml` and add the following. This will be your github workflow.
 
 ```yml
 name: CI Pipeline
@@ -70,7 +70,7 @@ Using the GitHub Repository dashboard for your fork of `jwt-pizza-service`, sele
 
 ![Create repo secret](createRepoSecret.png)
 
-Enter the name `FACTORY_API_KEY` and then enter the value you received for making calls to the factory. Press `Save key`, and then it is ready to be used in your workflow with the template placeholder of `${{ secrets.FACTORY_API_KEY }}`.
+Enter the name `FACTORY_API_KEY` and then enter the value you received for making calls to the factory. Press `Save key`, and then it is ready to be used in your workflow (ie. your `ci.yml` file) with the template placeholder of `${{ secrets.FACTORY_API_KEY }}`.
 
 ![Factory secret](factorySecret.png)
 
@@ -83,7 +83,7 @@ Go ahead and create the following secrets.
 
 ### Using MySQL in GitHub Actions
 
-To set up MySQL you need to add the following to your workflow.
+To set up MySQL you need to add the following to your workflow under jobs > build.
 
 ```yml
 services:
