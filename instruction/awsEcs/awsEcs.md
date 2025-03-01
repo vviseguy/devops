@@ -69,7 +69,7 @@ Now you are ready to define the task that will execute your JWT Pizza backend. T
 1. Provide the name **jwt-pizza-service** for the `Task definition family`.
 1. Under `Infrastructure requirements`
    1. Leave the `Launch type` as AWS Fargate.
-   1. Set the `Operating System` to be _Linux/ARM64_.
+   1. Set the `Operating System` to be **Linux/ARM64**.
    1. Select _.5 vCPU_ for CPU and _1 GB_ for Memory. This isn't very much computing power for a backend service but keeping things small like this will significantly reduce your AWS monthly bill.
    1. Leave `Task role` blank. We will define this in later instruction.
    1. Set the `Task execution role` to be the **jwt-pizza-ecs** execution role that you just created.
